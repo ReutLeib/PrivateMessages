@@ -1,11 +1,10 @@
 צריך ליצור שירות שיספק 3 נתונים מתוך אובייקט גייסון:
 1. פונקציית get ללא פרמטר למשל: getAllMessages
-2. post עם פרמטר אחד: getMessagesByUser(user)
-3. post\put\get מורכב: getMessByDate(Date)
+2. post עם פרמטר אחד: getMessagesByID(user)		DONE
+3. post\put\get מורכב: getMessByDate(Date+fromUser)
 לכל פונקציה ניגש עי ראוט שונה
 הדאטה יחזור לדפדפן בצורת JSON ולכן הכי קל זה לבדוק בפוסטמן
 
 לשים לב בסוף לקובץ הpackage.
-
 
 

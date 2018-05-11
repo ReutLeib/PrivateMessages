@@ -1,0 +1,43 @@
+[
+  {
+    "id":1,
+    "fromUser": "mister1",
+    "date": "21.1.18",
+    "message": "Hi thereeee1"
+  },
+
+  {
+    "id":2,
+    "fromUser": "mister2",
+    "date": "15.4.18",
+    "message": "Hi thereeeee2"
+  },
+
+  {
+    "id":3,
+    "fromUser": "mister3",
+    "date": "10.2.18",
+    "message": "Hi thereeeee3"
+  },
+
+  {
+    "id":4,
+    "fromUser": "mister4",
+    "date": "16.5.18",
+    "message": "Hi thereeeee4"
+  },
+
+  {
+    "id":5,
+    "fromUser": "mister5",
+    "date": "1.2.18",
+    "message": "Hi thereeeee5"
+  },
+
+  {
+    "id":6,
+    "fromUser": "mister6",
+    "date": "10.1.18",
+    "message": "Hi thereeeee6"
+  }
+]
