@@ -9,7 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "https://prvtmessages.herokuapp.com/PrivateMessages"
+    // "start": "https://prvtmessages.herokuapp.com/PrivateMessages"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
