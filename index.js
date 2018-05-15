@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.all('*', (req,res,next) => {
+  // cant print - note in console
    // res.send('Global handler for all route');
     req.next();   // next to next route
 });
@@ -23,25 +24,26 @@ app.get('/PrivateMessages', (req,res) => {
     // include to index.html
     res.sendFile(`${__dirname}/html/index.html`);
     console.log("/PrivateMessages");
-    // res.send('server root');
 });
 
 // client cant see public, if client sent request to assets:
 app.use('/assets', express.static(`${__dirname}/public`));
 
 app.get('/getAllMessages', (req,res) => { 
-   res.json(messFunc.getAllMessages());
    // res.json(messFunc.getAllMessages());
+   res.json(message:"Reut");
 });
 
 app.post('/getMessageByID/', (req,res) => {
-    res.json(messFunc.getMessageByID(req.body.id));
+    // res.json(messFunc.getMessageByID(req.body.id));
+   res.json(message:"Reut");
 });
 
 // TODO: 2 params - id & date
 // TODO: return JSON
 app.post('/getMessageByDateAndID/', (req,res) => { 
-    res.json(messFunc.getMessageByDateAndID(req.body.id,req.body.date));
+   res.json(message:"Reut");
+    res.json(messFunc.getMessageByID(req.body.id));
 });
 
 app.listen(port, () => {
