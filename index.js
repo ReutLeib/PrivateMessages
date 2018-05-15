@@ -34,12 +34,21 @@ app.get('/getAllMessages', (req,res) => {
    res.json({message:"Reut"});
 });
 
+app.get('/getMessageByID', (req,res) => { 
+      res.json({message:`Please copy the URL from here to the 'Postman',
+         and send a parameter 'id'`});
+});
+
 app.post('/getMessageByID/', (req,res) => {
     // res.json(messFunc.getMessageByID(req.body.id));
    res.json({message:"Reut"});
    
 });
 
+app.get('/getMessageByDateAndID', (req,res) => { 
+   res.json({message:`Please copy the URL from here to the 'Postman',
+         and send two parameters: 'id' and 'date'`});
+});
 // TODO: 2 params - id & date
 // TODO: return JSON
 app.post('/getMessageByDateAndID/', (req,res) => { 
