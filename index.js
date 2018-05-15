@@ -7,14 +7,11 @@ var express     = require('express'),
     app         = express();
     port        = process.env.PORT || 5050;
 
-var contents, jsonContent, g_messageJsons = [];
-    messageID="", date="", mess="", fromUser="";
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.all('*', (req,res,next) => {
-   // res.send('Global handler for all route');
+   res.send('Global handler for all route');
     req.next();   // next to next route
 });
 
