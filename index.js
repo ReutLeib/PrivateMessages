@@ -18,6 +18,10 @@ app.all('*', (req,res,next) => {
     req.next();   // next to next route
 });
 
+// app.get('/insert',(req,res) =>{
+//    res.json(messFunc.insert());
+// });
+
 app.get('/PrivateMessages', (req,res) => { 
     // include to index.html
     res.sendFile(`${__dirname}/html/index.html`);
@@ -30,15 +34,18 @@ app.use('/assets', express.static(`${__dirname}/public`));
 
 app.get('/getAllMessages', (req,res) => { 
    res.json(messFunc.getAllMessages());
+   // res.json(messFunc.getAllMessages());
 });
 
 app.post('/getMessageByID/', (req,res) => {
     res.json(messFunc.getMessageByID(req.body.id));
 });
 
-// TODO: 2 params - id & from User
+// TODO: 2 params - id & date
 // TODO: return JSON
-app.get('/getMessageData/:id', (req,res) => { 
+app.post('/getMessageByDateAndID/', (req,res) => { 
+    res.json(messFunc.getMessageByID(req.body.id,req.body.date));
+
 
        
   //  if (date){
