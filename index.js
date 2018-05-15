@@ -31,19 +31,19 @@ app.use('/assets', express.static(`${__dirname}/public`));
 
 app.get('/getAllMessages', (req,res) => { 
    // res.json(messFunc.getAllMessages());
-   res.json(message:"Reut");
+   res.json({message:"Reut"});
 });
 
 app.post('/getMessageByID/', (req,res) => {
     // res.json(messFunc.getMessageByID(req.body.id));
-   res.json(message:"Reut");
+   res.json({message:"Reut"});
+   
 });
 
 // TODO: 2 params - id & date
 // TODO: return JSON
 app.post('/getMessageByDateAndID/', (req,res) => { 
-   res.json(message:"Reut");
-    res.json(messFunc.getMessageByID(req.body.id));
+   res.json({message:"Reut"});
 });
 
 app.listen(port, () => {
