@@ -11,10 +11,6 @@ var mongoose = require('mongoose'),
     consts   = require('./consts');
 mongoose.connect(consts.MLAB_KEY);
 
-
-
-/////////////////////////////////////////////////////////////
-
 var contents, jsonContent, g_messageJsons = [];
     messageID="", date="", mess="", fromUser="";
 
@@ -27,9 +23,9 @@ module.exports = {
               console.log(`query error: ${err}`);
             console.log(`${user}`);
             console.log("_________________________________________");
+          // TODO: return JSON
             mongoose.disconnect();
           });
-          // console.log(`connected: ${User}`);
         },
         err =>{
           console.log(`connection error: ${err}`);
@@ -45,11 +41,9 @@ getMessageByID: (messageID) => {
               console.log(`query error: ${err}`);
             console.log(`${user}`);
             console.log("_________________________________________");
-
-            // return `${user}`;
+          // TODO: return JSON
             mongoose.disconnect();
           });
-          // console.log(`connected: ${User}`);
         },
         err =>{
           console.log(`connection error: ${err}`);
@@ -66,11 +60,9 @@ getMessageByDateAndID: (messageID,messageDate) =>{
             console.log(`query error: ${err}`);
           console.log(`${user}`);
           console.log("_________________________________________");
-
-         // return `${user}`;
+          // TODO: return JSON
          mongoose.disconnect();
        });
-        // console.log(`connected: ${User}`);
       },
       err =>{
         console.log(`connection error: ${err}`);
