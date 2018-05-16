@@ -1,14 +1,12 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-// TODO: change all route to app
-router.use(bodyParser.urlencoded({ extended: true }));
+const   express     = require('express'),
+        app         = express.Router();
+        bodyParser  = require('body-parser');
+        User        = require('./define_schema_main');
+        Message     = require('./define_schema_messages');
 
-var User = require('./define_schema_main');
-var Message = require('./define_schema_messages');
+app.use(bodyParser.urlencoded({ extended: true }));
 
-
-router.post('/insertMessage', (req, res) => {
+app.post('/insertMessage', (req, res) => {
 
     Message.create({date : req.body.date, message: req.body.message, fromUser:req.body.fromUser},(err, msg) => {
       if (err) return res.status(500).send({"error":"can't find a message"});
@@ -16,7 +14,7 @@ router.post('/insertMessage', (req, res) => {
         });
 });
 
-router.post('/insertUser', (req, res) => {
+app.post('/insertUser', (req, res) => {
     
     User.create({id: req.body.id,name: req.body.name},(err, msg) => {
         console.log(err);
@@ -24,9 +22,17 @@ router.post('/insertUser', (req, res) => {
             res.status(200).send(msg);
         });
 });
+// TODO: print with ids and not messages
+app.get('/getAllMessages', (req,res) => { 
 
-// TODO: fix it at index.html
-router.post('/getMessageByID/', (req,res) => {
+        User.find({}, (err, msg) => {
+        if (err) 
+            return res.status(500).send({"error":"can't find a message"});
+        res.status(200).send(msg);
+    });
+});
+
+app.post('/getMessageByID/', (req,res) => {
    
        User.findOne({id:req.body.id}, (err, user) => {
         if (err) 
@@ -39,17 +45,7 @@ router.post('/getMessageByID/', (req,res) => {
    
 });
 
-// TODO: print with ids and not messages
-router.get('/getAllMessages', (req,res) => { 
-
-        User.find({}, (err, msg) => {
-        if (err) 
-            return res.status(500).send({"error":"can't find a message"});
-        res.status(200).send(msg);
-    });
-});
-
-router.post('/getMessageByDateAndID/', (req,res) => { 
+app.post('/getMessageByDateAndID/', (req,res) => { 
    
        User.findOne({id:req.body.id}, (err, user) => {
         // console.log(user.messages);
@@ -63,4 +59,4 @@ router.post('/getMessageByDateAndID/', (req,res) => {
 });
 
 
-module.exports = router;
+module.exports = app;

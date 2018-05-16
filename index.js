@@ -7,7 +7,7 @@ const express     = require('express'),
       controller  = require('./controller'),
       messFunc    = require('./messFunctions');
       app         = express();
-      port        = process.env.PORT || 5050;
+      port        = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -28,14 +28,16 @@ app.use('/assets', express.static(`${__dirname}/public`));
 
 app.get('/getMessageByID', (req,res) => { 
       res.json({message:`Please copy this URL:
-          https://prvtmessages.herokuapp.com/mess/getMessageByDateAndID 
+          https://prvtmessages.herokuapp.com/mess/getMessageByID 
           to the 'Postman',
           and send a parameter 'id'`});
 });
 
 app.get('/getMessageByDateAndID', (req,res) => { 
-   res.json({message:`Please copy the URL from here to the 'Postman',
-         and send two parameters: 'id' and 'date'`});
+        res.json({message:`Please copy this URL:
+          https://prvtmessages.herokuapp.com/mess/getMessageByDateAndID 
+          to the 'Postman',
+          and send a parameter 'id' and 'date'`});
 });
 
 app.listen(port, () => {
