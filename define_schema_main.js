@@ -1,14 +1,14 @@
-var mongoose    = require('mongoose'),
-    messSchema  = require('./define_schema_messages'),
-    schema      = mongoose.Schema;   
+var mongoose = require('mongoose');
+var messSchema = require('./define_schema_messages');
 
 var mainSchema = new mongoose.Schema({
 
         id:{type:Number,index:1,required:true},
-        fromUser:String,
-        messages: [messSchema] 
+        name: String,
+        messages: [{type:mongoose.Schema.Types.ObjectId,ref:"Message"}] 
     
     });
 
-var Mess = mongoose.model('Messages',mainSchema);
-module.exports = Mess;
+mongoose.model('User', mainSchema);
+
+module.exports = mongoose.model('User');

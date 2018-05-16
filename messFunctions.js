@@ -35,20 +35,20 @@ module.exports = {
 
 getMessageByID: (messageID) => {
 
-      mongoose.connect(consts.MLAB_KEY).then( () =>{
-          Mess.find({id:messageID}, (err,user) => {
-            if(err)
-              console.log(`query error: ${err}`);
-            console.log(`${user}`);
-            console.log("_________________________________________");
-          // TODO: return JSON
-            mongoose.disconnect();
-          });
-        },
-        err =>{
-          console.log(`connection error: ${err}`);
-        }
-      );
+      // mongoose.connect(consts.MLAB_KEY).then( () =>{
+      //     Mess.find({id:messageID}, (err,user) => {
+      //       if(err)
+      //         console.log(`query error: ${err}`);
+      //       console.log(`${user}`);
+      //       console.log("_________________________________________");
+      //     // TODO: return JSON
+      //       mongoose.disconnect();
+      //     });
+      //   },
+      //   err =>{
+      //     console.log(`connection error: ${err}`);
+      //   }
+      // );
   },
 
 // TODO: gave me all dates of messageID - need to fix it 
