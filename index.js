@@ -4,7 +4,6 @@ const express     = require('express'),
       bodyParser  = require('body-parser'),
       fs          = require('fs'),
       controller  = require('./controller'),
-      messFunc    = require('./messFunctions');
       app         = express();
       port        = process.env.PORT || 8080;
 
