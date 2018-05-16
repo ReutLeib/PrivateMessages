@@ -28,6 +28,11 @@ h4, h5{
     color: white;
 }
 
+.formatColor{
+  color:#3ba8e2;
+  font-size: 26px;
+}
+
 #spanPrivateMess{
   color: #E084F5;
 }
@@ -50,19 +55,30 @@ h4, h5{
 }
 
 #secGetAllMessages{
-  left: 650px;
+  left: 750px;
 }
 
 #secGetMessageByID{
-  left: 650px;
+  left: 750px;
   top: 350px;
 }
 
 #secGetMessageByDateAndID{
-  left: 650px;
+  left: 750px;
   top: 550px;
 }
 
 #mainJSON{
-  top:230px;
+  top:200px;
+  left:100px;
+}
+
+#userJSON{
+  top:735px;
+  left:100px;
+}
+
+#messageJSON{
+  top:735px;
+  left: 750px;
 }

@@ -18,7 +18,7 @@ app.all('*', (req,res,next) => {
 app.get('/PrivateMessages', (req,res) => { 
     // include to index.html
     res.sendFile(`${__dirname}/html/index.html`);
-    console.log("/PrivateMessages");
+    console.log("Enter route: /PrivateMessages");
 });
 
 // client cant see public, if client sent request to assets:
@@ -29,6 +29,8 @@ app.get('/getMessageByID', (req,res) => {
           https://prvtmessages.herokuapp.com/mess/getMessageByID 
           to the 'Postman',
           and send a parameter 'id'`});
+    console.log("Enter route(GET): /getMessageByID");
+
 });
 
 app.get('/getMessageByDateAndID', (req,res) => { 
@@ -36,6 +38,8 @@ app.get('/getMessageByDateAndID', (req,res) => {
           https://prvtmessages.herokuapp.com/mess/getMessageByDateAndID 
           to the 'Postman',
           and send a parameter 'id' and 'date'`});
+    console.log("Enter route(GET): /getMessageByDateAndID");
+        
 });
 
 app.listen(port, () => {

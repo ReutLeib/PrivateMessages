@@ -10,30 +10,77 @@
     <h1>API</h1>
     <h2>Wolcome to <span id="spanPrivateMess">Private Messages<span> Application</h2>
 
-    <a href="#">
-      <section id="mainJSON" class="card">
-        <section class="container">
-          <h4>JSON format example:</h4> 
-          <p> { <br>
-            &nbsp; id: 1, <br>
-            &nbsp; fromUser: "mister1", <br>
-            &nbsp; messages: [ <br>
-              &nbsp; &nbsp; { <br>
-              &nbsp; &nbsp; &nbsp; date: "21.1.18", <br>
-              &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.1" <br>
-              &nbsp; &nbsp; }, <br>
-              &nbsp; &nbsp; { <br>
-              &nbsp; &nbsp; &nbsp; date: "15.4.18", <br>
-              &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.2" <br>
-              &nbsp; &nbsp; }, <br>
-              &nbsp; &nbsp; { <br>
-              &nbsp; &nbsp; &nbsp; date: "9.3.18", <br>
-              &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.3" <br>
-              &nbsp; &nbsp; } <br>
-             }</p> 
-        </section>
+    <section id="mainJSON" class="card">
+      <section class="container">
+        <h4>JSON format example:</h4> 
+        <p> { <br>
+          &nbsp; id: 1, <br>
+          &nbsp; name: "mister", <br>
+          &nbsp; messages: [ <br>
+            &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; date: "21.1.18", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fromUser: "miss", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.1" <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; }, <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; date: "15.4.18", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fromUser: "miss", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.2" <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; }, <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; date: "9.3.18", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fromUser: "miss", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.3" <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; } <br>
+            &nbsp; &nbsp; ] <br>
+           }</p> 
       </section>
-    </a>
+    </section>
+
+      <section id="userJSON" class="card">
+      <section class="container">
+        <h4>JSON <span class="formatColor">User</span> format example:</h4> 
+        <p> { <br>
+          &nbsp; id: 1, <br>
+          &nbsp; name: "mister", <br>
+          &nbsp; messages: [ <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; oid: "5afc4aa98592992a78f6589c", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; }, <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; oid: "5afc4aa98592992a78f6589d", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; }, <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; oid: "5afc4aa98592992a78f6589e", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; } <br>
+            &nbsp; &nbsp; ] <br>
+           }</p> 
+      </section>
+    </section>
+
+      <section id="messageJSON" class="card">
+      <section class="container">
+        <h4>JSON <span class="formatColor">Message</span> format example:</h4> 
+        <p> { <br>
+          &nbsp; _id: "5afc4aa98592992a78f6589c", <br>
+            &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; date: "21.1.18", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; fromUser: "miss", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.1" <br>
+            &nbsp; &nbsp; &nbsp; }, <br>
+            &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; date: "15.4.18", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; fromUser: "miss", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.2" <br>
+            &nbsp; &nbsp; &nbsp; }, <br>
+            &nbsp; &nbsp; &nbsp; { <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; date: "9.3.18", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; fromUser: "miss", <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; message: "Hi thereeee1.3" <br>
+            &nbsp; &nbsp; &nbsp; } <br>
+           }</p> 
+      </section>
+    </section>
 
     <a href="https://prvtmessages.herokuapp.com/mess/getAllMessages">
      <section id="secGetAllMessages" class="card">
