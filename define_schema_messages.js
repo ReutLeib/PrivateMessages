@@ -1,6 +1,6 @@
-var mongoose  = require('mongoose'),
-    schema = mongoose.Schema;   
-// message
+const mongoose  = require('mongoose'),
+      schema    = mongoose.Schema;   
+
 var messSchema = new mongoose.Schema({
 
         date:String,

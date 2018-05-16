@@ -1,5 +1,5 @@
-var mongoose = require('mongoose');
-var messSchema = require('./define_schema_messages');
+const mongoose    = require('mongoose');
+      messSchema  = require('./define_schema_messages');
 
 var mainSchema = new mongoose.Schema({
 

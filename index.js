@@ -1,4 +1,3 @@
-// TODO: needs config ??
 // TODO: ignore from consts file
 const express     = require('express'),
       event       = require('events'),
