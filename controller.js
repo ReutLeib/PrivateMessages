@@ -1,6 +1,6 @@
 // TODO: change the package json
 // TODO: check if i need to print log with all data
-const   express     = require('express'),
+var   express     = require('express'),
         app         = express.Router();
         bodyParser  = require('body-parser');
         User        = require('./define_schema_main');
@@ -15,7 +15,7 @@ app.post('/insertMessage', (req, res) => {
       if (err) return res.status(500).send({"error":"can't find a message"});
             res.status(200).send(msg);
         });
-    console.log("Enter route(POST): /insertMessage");
+    // console.log("Enter route(POST): /insertMessage");
 });
 
 app.post('/insertUser', (req, res) => {
@@ -25,7 +25,7 @@ app.post('/insertUser', (req, res) => {
       if (err) return res.status(500).send({"error":"can't find a user"});
             res.status(200).send(msg);
         });
-    console.log("Enter route(POST): /insertUser");
+    // console.log("Enter route(POST): /insertUser");
 });
 
 // ROUTE 1
@@ -37,7 +37,7 @@ app.get('/getAllMessages', (req,res) => {
             return res.status(500).send({"error":"can't find a message"});
         res.status(200).send(msg);
     });
-    console.log("Enter route(POST): /getAllMessages");
+    // console.log("Enter route(POST): /getAllMessages");
 
 });
 

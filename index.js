@@ -1,9 +1,10 @@
 // TODO: ignore from consts file
-const express     = require('express'),
+var express     = require('express'),
       event       = require('events'),
       bodyParser  = require('body-parser'),
       fs          = require('fs'),
       controller  = require('./controller'),
+      messFunc    = require('./messFunctions');
       app         = express();
       port        = process.env.PORT || 8080;
 
@@ -39,12 +40,13 @@ app.get('/getMessageByDateAndID', (req,res) => {
           to the 'Postman',
           and send a parameter 'id' and 'date'`});
     console.log("Enter route(GET): /getMessageByDateAndID");
-        
+
 });
 
 app.listen(port, () => {
     console.log('Our app is running on http://localhost:' + port);
 });
+
 
 
 
