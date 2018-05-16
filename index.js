@@ -27,8 +27,10 @@ app.get('/PrivateMessages', (req,res) => {
 app.use('/assets', express.static(`${__dirname}/public`));
 
 app.get('/getMessageByID', (req,res) => { 
-      res.json({message:`Please copy the URL from here to the 'Postman',
-         and send a parameter 'id'`});
+      res.json({message:`Please copy this URL:
+          https://prvtmessages.herokuapp.com/mess/getMessageByDateAndID 
+          to the 'Postman',
+          and send a parameter 'id'`});
 });
 
 app.get('/getMessageByDateAndID', (req,res) => { 
