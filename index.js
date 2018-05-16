@@ -35,10 +35,10 @@ app.use('/assets', express.static(`${__dirname}/public`));
 //    // res.json({message:"Reut"});
 // });
 
-// app.get('/getMessageByID', (req,res) => { 
-//       res.json({message:`Please copy the URL from here to the 'Postman',
-//          and send a parameter 'id'`});
-// });
+app.get('/getMessageByID', (req,res) => { 
+      res.json({message:`Please copy the URL from here to the 'Postman',
+         and send a parameter 'id'`});
+});
 
 // app.post('/getMessageByID/', (req,res) => {
 //     res.json(messFunc.getMessageByID(req.body.id));
@@ -46,10 +46,10 @@ app.use('/assets', express.static(`${__dirname}/public`));
    
 // });
 
-// app.get('/getMessageByDateAndID', (req,res) => { 
-//    res.json({message:`Please copy the URL from here to the 'Postman',
-//          and send two parameters: 'id' and 'date'`});
-// });
+app.get('/getMessageByDateAndID', (req,res) => { 
+   res.json({message:`Please copy the URL from here to the 'Postman',
+         and send two parameters: 'id' and 'date'`});
+});
 
 
 
