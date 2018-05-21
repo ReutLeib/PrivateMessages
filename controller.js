@@ -33,11 +33,11 @@ app.post('/insertUser', (req, res) => {
 app.get('/getAllMessages', (req,res) => { 
 
     console.log("Enter route(POST): /getAllMessages");
-    // User.find({}, (err, msg) => {
-    //     if (err) 
-    //         return res.status(500).send({"error":"can't find a message"});
-    //     res.status(200).send(msg);
-    // });
+    User.find({}, (err, msg) => {
+        if (err) 
+            return res.status(500).send({"error":"can't find a message"});
+        res.status(200).send(msg);
+    });
 
 });
 
