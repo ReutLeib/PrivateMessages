@@ -1,4 +1,5 @@
 // TODO: ignore from consts file
+// TODO: dependences in json file
 var express     = require('express'),
       event       = require('events'),
       bodyParser  = require('body-parser'),
